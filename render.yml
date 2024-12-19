@@ -1,0 +1,37 @@
+services:
+  - type: web
+    name: flight-booking-frontend
+    env: static
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: ./frontend/dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://flight-booking-backend.onrender.com
+
+  - type: web
+    name: flight-booking-backend
+    env: node
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: DUFFLE_API_KEY
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: ALLOWED_ORIGINS
+        value: https://flight-booking-frontend.onrender.com
+
+  - type: redis
+    name: flight-booking-cache
+    ipAllowList: []
+    plan: free
+
+databases:
+  - name: flight-booking-db
+    databaseName: flight_booking
+    user: flight_booking_user
+    plan: free

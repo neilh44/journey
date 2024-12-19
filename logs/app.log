@@ -1,0 +1,171 @@
+2024-12-19 07:02:16,477 - root - INFO - [app.py:357] - Starting application on port 5000
+2024-12-19 07:02:40,851 - root - INFO - [app.py:357] - Starting application on port 5000
+2024-12-19 07:02:41,110 - werkzeug - INFO - [_internal.py:97] - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.222:5000
+2024-12-19 07:02:41,110 - werkzeug - INFO - [_internal.py:97] - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.222:5000
+2024-12-19 07:02:41,112 - werkzeug - INFO - [_internal.py:97] - [33mPress CTRL+C to quit[0m
+2024-12-19 07:02:41,112 - werkzeug - INFO - [_internal.py:97] - [33mPress CTRL+C to quit[0m
+2024-12-19 07:02:41,114 - werkzeug - INFO - [_internal.py:97] -  * Restarting with stat
+2024-12-19 07:02:41,114 - werkzeug - INFO - [_internal.py:97] -  * Restarting with stat
+2024-12-19 07:02:41,459 - root - INFO - [app.py:357] - Starting application on port 5000
+2024-12-19 07:02:41,505 - werkzeug - WARNING - [_internal.py:97] -  * Debugger is active!
+2024-12-19 07:02:41,505 - werkzeug - WARNING - [_internal.py:97] -  * Debugger is active!
+2024-12-19 07:02:41,522 - werkzeug - INFO - [_internal.py:97] -  * Debugger PIN: 990-455-200
+2024-12-19 07:02:41,522 - werkzeug - INFO - [_internal.py:97] -  * Debugger PIN: 990-455-200
+2024-12-19 07:02:49,439 - root - INFO - [app.py:255] - Request: GET http://127.0.0.1:5000/
+2024-12-19 07:02:49,439 - root - INFO - [app.py:268] - Serving index page
+2024-12-19 07:02:49,467 - root - INFO - [app.py:262] - Response: 200 OK
+2024-12-19 07:02:49,469 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [19/Dec/2024 07:02:49] "GET / HTTP/1.1" 200 -
+2024-12-19 07:02:49,469 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [19/Dec/2024 07:02:49] "GET / HTTP/1.1" 200 -
+2024-12-19 07:02:53,792 - root - INFO - [app.py:255] - Request: POST http://127.0.0.1:5000/api/search
+2024-12-19 07:02:53,795 - root - INFO - [app.py:285] - Processing search request: Flight from London to New York on December 15th for 2 passengers in economy
+2024-12-19 07:02:53,797 - root - INFO - [app.py:172] - Processing natural language query: Flight from London to New York on December 15th for 2 passengers in economy
+2024-12-19 07:02:54,307 - root - INFO - [app.py:94] - Searching flights with parameters: {"departure_city": "LHR", "arrival_city": "JFK", "departure_date": "2024-12-15", "number_of_passengers": 2, "cabin_class": "economy"}
+2024-12-19 07:02:54,790 - root - ERROR - [app.py:126] - Duffel API error: {"errors":[{"documentation_url":"https://duffel.com/docs/api/overview/response-handling","source":{"field":"departure_date","pointer":"/slices/0/departure_date"},"title":"Invalid date","type":"validation_error","message":"Field 'departure_date' must be after 2024-12-18","code":"invalid_date"}],"meta":{"request_id":"GBJwBVM1YiQQ_1sA57rE","status":422}}
+2024-12-19 07:02:54,790 - root - ERROR - [app.py:166] - Flight search error: Unexpected status code: 422
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 127, in search_flights
+    raise Exception(f"Unexpected status code: {response.status_code}")
+Exception: Unexpected status code: 422
+2024-12-19 07:02:54,800 - root - ERROR - [app.py:308] - Flight search error: Flight search error: Unexpected status code: 422
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 127, in search_flights
+    raise Exception(f"Unexpected status code: {response.status_code}")
+Exception: Unexpected status code: 422
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 293, in search_flights_endpoint
+    flights = agent.search_flights(query_json)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 167, in search_flights
+    raise Exception(f"Flight search error: {str(e)}")
+Exception: Flight search error: Unexpected status code: 422
+2024-12-19 07:02:54,805 - root - INFO - [app.py:262] - Response: 500 INTERNAL SERVER ERROR
+2024-12-19 07:02:54,806 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [19/Dec/2024 07:02:54] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2024-12-19 07:02:54,806 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [19/Dec/2024 07:02:54] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2024-12-19 07:03:39,877 - root - INFO - [app.py:255] - Request: POST http://127.0.0.1:5000/api/search
+2024-12-19 07:03:39,879 - root - INFO - [app.py:285] - Processing search request: Flight from London to New York on December 20th for 2 passengers in economy
+2024-12-19 07:03:39,879 - root - INFO - [app.py:172] - Processing natural language query: Flight from London to New York on December 20th for 2 passengers in economy
+2024-12-19 07:03:40,358 - root - INFO - [app.py:94] - Searching flights with parameters: {"departure_city": "LHR", "arrival_city": "JFK", "departure_date": "2024-12-20", "number_of_passengers": 2, "cabin_class": "economy"}
+2024-12-19 07:03:44,523 - root - INFO - [app.py:131] - Created offer request: orq_0000ApBjgZGEIAyCX1Xtc8
+2024-12-19 07:03:45,070 - root - INFO - [app.py:144] - Found 50 offers
+2024-12-19 07:03:45,081 - root - INFO - [app.py:294] - Found 50 flights
+2024-12-19 07:03:45,083 - root - INFO - [app.py:262] - Response: 200 OK
+2024-12-19 07:03:45,085 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [19/Dec/2024 07:03:45] "POST /api/search HTTP/1.1" 200 -
+2024-12-19 07:03:45,085 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [19/Dec/2024 07:03:45] "POST /api/search HTTP/1.1" 200 -
+2024-12-19 07:05:28,843 - root - INFO - [app.py:255] - Request: GET http://127.0.0.1:5000/
+2024-12-19 07:05:28,844 - root - INFO - [app.py:268] - Serving index page
+2024-12-19 07:05:28,849 - root - INFO - [app.py:262] - Response: 200 OK
+2024-12-19 07:05:28,851 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [19/Dec/2024 07:05:28] "GET / HTTP/1.1" 200 -
+2024-12-19 07:05:28,851 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [19/Dec/2024 07:05:28] "GET / HTTP/1.1" 200 -
+2024-12-19 07:05:36,046 - root - INFO - [app.py:255] - Request: POST http://127.0.0.1:5000/api/search
+2024-12-19 07:05:36,048 - root - INFO - [app.py:285] - Processing search request: Flight from London to New York tomorrow for 2 passengers in economy
+2024-12-19 07:05:36,049 - root - INFO - [app.py:172] - Processing natural language query: Flight from London to New York tomorrow for 2 passengers in economy
+2024-12-19 07:05:36,791 - root - INFO - [app.py:94] - Searching flights with parameters: {"departure_city": "LHR", "arrival_city": "JFK", "departure_date": "2024-12-14", "number_of_passengers": 2, "cabin_class": "economy"}
+2024-12-19 07:05:37,276 - root - ERROR - [app.py:126] - Duffel API error: {"errors":[{"documentation_url":"https://duffel.com/docs/api/overview/response-handling","source":{"field":"departure_date","pointer":"/slices/0/departure_date"},"title":"Invalid date","type":"validation_error","message":"Field 'departure_date' must be after 2024-12-18","code":"invalid_date"}],"meta":{"request_id":"GBJwKydDpL29-LgBGgfD","status":422}}
+2024-12-19 07:05:37,277 - root - ERROR - [app.py:166] - Flight search error: Unexpected status code: 422
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 127, in search_flights
+    raise Exception(f"Unexpected status code: {response.status_code}")
+Exception: Unexpected status code: 422
+2024-12-19 07:05:37,279 - root - ERROR - [app.py:308] - Flight search error: Flight search error: Unexpected status code: 422
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 127, in search_flights
+    raise Exception(f"Unexpected status code: {response.status_code}")
+Exception: Unexpected status code: 422
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 293, in search_flights_endpoint
+    flights = agent.search_flights(query_json)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 167, in search_flights
+    raise Exception(f"Flight search error: {str(e)}")
+Exception: Flight search error: Unexpected status code: 422
+2024-12-19 07:05:37,291 - root - INFO - [app.py:262] - Response: 500 INTERNAL SERVER ERROR
+2024-12-19 07:05:37,291 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [19/Dec/2024 07:05:37] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2024-12-19 07:05:37,291 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [19/Dec/2024 07:05:37] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2024-12-19 07:05:51,118 - root - INFO - [app.py:255] - Request: POST http://127.0.0.1:5000/api/search
+2024-12-19 07:05:51,119 - root - INFO - [app.py:285] - Processing search request: Flight from London to New York next friday for 2 passengers in economy
+2024-12-19 07:05:51,119 - root - INFO - [app.py:172] - Processing natural language query: Flight from London to New York next friday for 2 passengers in economy
+2024-12-19 07:05:51,576 - root - INFO - [app.py:94] - Searching flights with parameters: {"departure_city": "LHR", "arrival_city": "JFK", "departure_date": "2024-12-08", "number_of_passengers": 2, "cabin_class": "economy"}
+2024-12-19 07:05:52,031 - root - ERROR - [app.py:126] - Duffel API error: {"errors":[{"documentation_url":"https://duffel.com/docs/api/overview/response-handling","source":{"field":"departure_date","pointer":"/slices/0/departure_date"},"title":"Invalid date","type":"validation_error","message":"Field 'departure_date' must be after 2024-12-18","code":"invalid_date"}],"meta":{"request_id":"GBJwLpZiQXxsou4BPpkC","status":422}}
+2024-12-19 07:05:52,031 - root - ERROR - [app.py:166] - Flight search error: Unexpected status code: 422
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 127, in search_flights
+    raise Exception(f"Unexpected status code: {response.status_code}")
+Exception: Unexpected status code: 422
+2024-12-19 07:05:52,033 - root - ERROR - [app.py:308] - Flight search error: Flight search error: Unexpected status code: 422
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 127, in search_flights
+    raise Exception(f"Unexpected status code: {response.status_code}")
+Exception: Unexpected status code: 422
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 293, in search_flights_endpoint
+    flights = agent.search_flights(query_json)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 167, in search_flights
+    raise Exception(f"Flight search error: {str(e)}")
+Exception: Flight search error: Unexpected status code: 422
+2024-12-19 07:05:52,043 - root - INFO - [app.py:262] - Response: 500 INTERNAL SERVER ERROR
+2024-12-19 07:05:52,044 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [19/Dec/2024 07:05:52] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2024-12-19 07:05:52,044 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [19/Dec/2024 07:05:52] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2024-12-19 07:06:01,760 - root - INFO - [app.py:255] - Request: POST http://127.0.0.1:5000/api/search
+2024-12-19 07:06:01,761 - root - INFO - [app.py:285] - Processing search request: Flight from London to New York 30 december 2024  for 2 passengers in economy
+2024-12-19 07:06:01,762 - root - INFO - [app.py:172] - Processing natural language query: Flight from London to New York 30 december 2024  for 2 passengers in economy
+2024-12-19 07:06:02,219 - root - INFO - [app.py:94] - Searching flights with parameters: {"departure_city": "LHR", "arrival_city": "JFK", "departure_date": "2024-12-30", "number_of_passengers": 2, "cabin_class": "economy"}
+2024-12-19 07:06:05,914 - root - INFO - [app.py:131] - Created offer request: orq_0000ApBjtd9r779wNonF8S
+2024-12-19 07:06:06,445 - root - INFO - [app.py:144] - Found 50 offers
+2024-12-19 07:06:06,454 - root - INFO - [app.py:294] - Found 50 flights
+2024-12-19 07:06:06,457 - root - INFO - [app.py:262] - Response: 200 OK
+2024-12-19 07:06:06,458 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [19/Dec/2024 07:06:06] "POST /api/search HTTP/1.1" 200 -
+2024-12-19 07:06:06,458 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [19/Dec/2024 07:06:06] "POST /api/search HTTP/1.1" 200 -
+2024-12-19 07:06:26,908 - root - INFO - [app.py:255] - Request: GET http://127.0.0.1:5000/
+2024-12-19 07:06:26,908 - root - INFO - [app.py:268] - Serving index page
+2024-12-19 07:06:26,922 - root - INFO - [app.py:262] - Response: 200 OK
+2024-12-19 07:06:26,923 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [19/Dec/2024 07:06:26] "GET / HTTP/1.1" 200 -
+2024-12-19 07:06:26,923 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [19/Dec/2024 07:06:26] "GET / HTTP/1.1" 200 -
+2024-12-19 07:06:41,406 - root - INFO - [app.py:255] - Request: GET http://127.0.0.1:5000/
+2024-12-19 07:06:41,408 - root - INFO - [app.py:268] - Serving index page
+2024-12-19 07:06:41,411 - root - INFO - [app.py:262] - Response: 200 OK
+2024-12-19 07:06:41,412 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [19/Dec/2024 07:06:41] "GET / HTTP/1.1" 200 -
+2024-12-19 07:06:41,412 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [19/Dec/2024 07:06:41] "GET / HTTP/1.1" 200 -
+2024-12-19 07:06:44,953 - root - INFO - [app.py:255] - Request: POST http://127.0.0.1:5000/api/search
+2024-12-19 07:06:44,954 - root - INFO - [app.py:285] - Processing search request: Business class from LAX to Tokyo next week for 1 person
+2024-12-19 07:06:44,954 - root - INFO - [app.py:172] - Processing natural language query: Business class from LAX to Tokyo next week for 1 person
+2024-12-19 07:06:45,398 - root - INFO - [app.py:94] - Searching flights with parameters: {"departure_city": "LAX", "arrival_city": "NRT", "departure_date": "2024-03-??", "number_of_passengers": 1, "cabin_class": "business"}
+2024-12-19 07:06:45,848 - root - ERROR - [app.py:126] - Duffel API error: {"errors":[{"documentation_url":"https://duffel.com/docs/api/overview/response-handling","source":{"field":"departure_date","pointer":"/slices/0/departure_date"},"title":"Invalid type","type":"validation_error","message":"Field 'departure_date' is invalid. Expected a date in ISO 8601 format (YYYY-MM-DD)","code":"validation_type"}],"meta":{"request_id":"GBJwOx48FFNppjUBOiWi","status":422}}
+2024-12-19 07:06:45,850 - root - ERROR - [app.py:166] - Flight search error: Unexpected status code: 422
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 127, in search_flights
+    raise Exception(f"Unexpected status code: {response.status_code}")
+Exception: Unexpected status code: 422
+2024-12-19 07:06:45,851 - root - ERROR - [app.py:308] - Flight search error: Flight search error: Unexpected status code: 422
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 127, in search_flights
+    raise Exception(f"Unexpected status code: {response.status_code}")
+Exception: Unexpected status code: 422
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 293, in search_flights_endpoint
+    flights = agent.search_flights(query_json)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 167, in search_flights
+    raise Exception(f"Flight search error: {str(e)}")
+Exception: Flight search error: Unexpected status code: 422
+2024-12-19 07:06:45,863 - root - INFO - [app.py:262] - Response: 500 INTERNAL SERVER ERROR
+2024-12-19 07:06:45,863 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [19/Dec/2024 07:06:45] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2024-12-19 07:06:45,863 - werkzeug - INFO - [_internal.py:97] - 127.0.0.1 - - [19/Dec/2024 07:06:45] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -

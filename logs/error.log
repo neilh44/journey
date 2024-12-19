@@ -1,0 +1,84 @@
+2024-12-19 07:02:54,790 - root - ERROR - [app.py:126] - Duffel API error: {"errors":[{"documentation_url":"https://duffel.com/docs/api/overview/response-handling","source":{"field":"departure_date","pointer":"/slices/0/departure_date"},"title":"Invalid date","type":"validation_error","message":"Field 'departure_date' must be after 2024-12-18","code":"invalid_date"}],"meta":{"request_id":"GBJwBVM1YiQQ_1sA57rE","status":422}}
+2024-12-19 07:02:54,790 - root - ERROR - [app.py:166] - Flight search error: Unexpected status code: 422
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 127, in search_flights
+    raise Exception(f"Unexpected status code: {response.status_code}")
+Exception: Unexpected status code: 422
+2024-12-19 07:02:54,800 - root - ERROR - [app.py:308] - Flight search error: Flight search error: Unexpected status code: 422
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 127, in search_flights
+    raise Exception(f"Unexpected status code: {response.status_code}")
+Exception: Unexpected status code: 422
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 293, in search_flights_endpoint
+    flights = agent.search_flights(query_json)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 167, in search_flights
+    raise Exception(f"Flight search error: {str(e)}")
+Exception: Flight search error: Unexpected status code: 422
+2024-12-19 07:05:37,276 - root - ERROR - [app.py:126] - Duffel API error: {"errors":[{"documentation_url":"https://duffel.com/docs/api/overview/response-handling","source":{"field":"departure_date","pointer":"/slices/0/departure_date"},"title":"Invalid date","type":"validation_error","message":"Field 'departure_date' must be after 2024-12-18","code":"invalid_date"}],"meta":{"request_id":"GBJwKydDpL29-LgBGgfD","status":422}}
+2024-12-19 07:05:37,277 - root - ERROR - [app.py:166] - Flight search error: Unexpected status code: 422
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 127, in search_flights
+    raise Exception(f"Unexpected status code: {response.status_code}")
+Exception: Unexpected status code: 422
+2024-12-19 07:05:37,279 - root - ERROR - [app.py:308] - Flight search error: Flight search error: Unexpected status code: 422
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 127, in search_flights
+    raise Exception(f"Unexpected status code: {response.status_code}")
+Exception: Unexpected status code: 422
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 293, in search_flights_endpoint
+    flights = agent.search_flights(query_json)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 167, in search_flights
+    raise Exception(f"Flight search error: {str(e)}")
+Exception: Flight search error: Unexpected status code: 422
+2024-12-19 07:05:52,031 - root - ERROR - [app.py:126] - Duffel API error: {"errors":[{"documentation_url":"https://duffel.com/docs/api/overview/response-handling","source":{"field":"departure_date","pointer":"/slices/0/departure_date"},"title":"Invalid date","type":"validation_error","message":"Field 'departure_date' must be after 2024-12-18","code":"invalid_date"}],"meta":{"request_id":"GBJwLpZiQXxsou4BPpkC","status":422}}
+2024-12-19 07:05:52,031 - root - ERROR - [app.py:166] - Flight search error: Unexpected status code: 422
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 127, in search_flights
+    raise Exception(f"Unexpected status code: {response.status_code}")
+Exception: Unexpected status code: 422
+2024-12-19 07:05:52,033 - root - ERROR - [app.py:308] - Flight search error: Flight search error: Unexpected status code: 422
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 127, in search_flights
+    raise Exception(f"Unexpected status code: {response.status_code}")
+Exception: Unexpected status code: 422
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 293, in search_flights_endpoint
+    flights = agent.search_flights(query_json)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 167, in search_flights
+    raise Exception(f"Flight search error: {str(e)}")
+Exception: Flight search error: Unexpected status code: 422
+2024-12-19 07:06:45,848 - root - ERROR - [app.py:126] - Duffel API error: {"errors":[{"documentation_url":"https://duffel.com/docs/api/overview/response-handling","source":{"field":"departure_date","pointer":"/slices/0/departure_date"},"title":"Invalid type","type":"validation_error","message":"Field 'departure_date' is invalid. Expected a date in ISO 8601 format (YYYY-MM-DD)","code":"validation_type"}],"meta":{"request_id":"GBJwOx48FFNppjUBOiWi","status":422}}
+2024-12-19 07:06:45,850 - root - ERROR - [app.py:166] - Flight search error: Unexpected status code: 422
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 127, in search_flights
+    raise Exception(f"Unexpected status code: {response.status_code}")
+Exception: Unexpected status code: 422
+2024-12-19 07:06:45,851 - root - ERROR - [app.py:308] - Flight search error: Flight search error: Unexpected status code: 422
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 127, in search_flights
+    raise Exception(f"Unexpected status code: {response.status_code}")
+Exception: Unexpected status code: 422
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 293, in search_flights_endpoint
+    flights = agent.search_flights(query_json)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nileshhanotia/Projects/Journey-1/app.py", line 167, in search_flights
+    raise Exception(f"Flight search error: {str(e)}")
+Exception: Flight search error: Unexpected status code: 422
